@@ -1,0 +1,28 @@
+spring:
+  .datasource:
+    .url: jdbc:mysql://zanina25.beget.tech/zanina25_search?useUnicode=true&characterEncoding=utf-8&autoReconnect=true
+    .username: zanina25_search
+    .password: eT6dqg&g
+    .hikari:
+  .jpa:
+    .hibernate.ddl-auto: update
+    .show-sql: false
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder: info
+hibernate:
+  id.new_generator_mappings: true
+  jdbc:
+    batch_size: 10
+  order_inserts: true
+  order_updates: true
+  default-character-set: utf8mb4
+  enable_lazy_load_no_trans: true
+configs:
+  userAgent: PolarSearchBot
+  webInterfacePath: /admin
+  sites:
+    -
+      url: http://www.playback.ru/
+      name: Playback
+    -
+      url: https://ipfran.ru/
+      name: ИПФ РАН

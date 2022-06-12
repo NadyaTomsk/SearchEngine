@@ -1,0 +1,27 @@
+spring:
+  .datasource:
+    .url: jdbc:mysql://localhost:3306/search_engine?useUnicode=true&characterEncoding=utf-8&autoReconnect=true
+    .username: root
+    .password: 864512
+  .jpa:
+    .hibernate.ddl-auto: update
+    .show-sql: false
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder: debug
+hibernate:
+  id.new_generator_mappings: true
+  jdbc:
+    batch_size: 10
+  order_inserts: true
+  order_updates: true
+  default-character-set: utf8mb4
+  enable_lazy_load_no_trans: true
+configs:
+  userAgent: PolarSearchBot
+  webInterfacePath: /admin
+  sites:
+    -
+      url: http://www.playback.ru/
+      name: Playback
+    -
+      url: https://ipfran.ru/
+      name: ИПФ РАН
